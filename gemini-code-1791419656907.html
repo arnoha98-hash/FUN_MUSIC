@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منصة المهارات الموسيقية التفاعلية - سلطنة عمان</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="logo-container">
+      <span style="font-size: 2rem;">🎼</span>
+      <div class="logo-title">المهارات الموسيقية | عمان</div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-btn active">الرئيسية</a></li>
+      <li><a href="grade1.html" class="nav-btn">الصف الأول</a></li>
+      <li><a href="grade4.html" class="nav-btn">الصف الرابع</a></li>
+    </ul>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>مرحباً بكم في منصة المهارات الموسيقية 🎵</h1>
+    <p>منهج سلطنة عمان التفاعلي للتعليم الممتع والتفاعلي بدون الحاجة لتسجيل دخول</p>
+  </section>
+
+  <!-- Grade Selection Grid -->
+  <main class="container">
+    <h2 style="text-align: center; margin-bottom: 25px; color: var(--primary-color);">اختر الصف الدراسي</h2>
+    <div class="grid-cards">
+      
+      <!-- Grade 1 Card -->
+      <div class="card">
+        <div class="card-icon">🎺</div>
+        <h3>الصف الأول الأساسي</h3>
+        <p>استكشف الأصوات، الأناشيد الممتعة، والألعاب الموسيقية الشعبية.</p>
+        <a href="grade1.html" class="btn-action">دخول دروس الصف الأول</a>
+      </div>
+
+      <!-- Grade 4 Card -->
+      <div class="card">
+        <div class="card-icon">🎹</div>
+        <h3>الصف الرابع الأساسي</h3>
+        <p>تعلم عزف الأورج، النوتة الموسيقية، والموازين الإيقاعية.</p>
+        <a href="grade4.html" class="btn-action">دخول دروس الصف الرابع</a>
+      </div>
+
+    </div>
+
+    <!-- Virtual Music Lab Section -->
+    <section style="margin-top: 60px;">
+      <h2 style="text-align: center; margin-bottom: 20px; color: var(--primary-color);">🎼 المختبر الموسيقي التفاعلي</h2>
+      <p style="text-align: center; margin-bottom: 15px;">اعزف على البيانو الافتراضي مباشرة باستخدام اللمس أو لوحة المفاتيح!</p>
+      
+      <div class="piano-wrapper" id="piano">
+        <!-- White and Black Keys for Do-Re-Mi Scale -->
+        <div class="key white" data-note="C4"><span>دو</span></div>
+        <div class="key black" data-note="C#4"></div>
+        <div class="key white" data-note="D4"><span>ري</span></div>
+        <div class="key black" data-note="D#4"></div>
+        <div class="key white" data-note="E4"><span>مي</span></div>
+        <div class="key white" data-note="F4"><span>فا</span></div>
+        <div class="key black" data-note="F#4"></div>
+        <div class="key white" data-note="G4"><span>صول</span></div>
+        <div class="key black" data-note="G#4"></div>
+        <div class="key white" data-note="A4"><span>لا</span></div>
+        <div class="key black" data-note="A#4"></div>
+        <div class="key white" data-note="B4"><span>سي</span></div>
+        <div class="key white" data-note="C5"><span>دو (جواب)</span></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/piano.js"></script>
+</body>
+</html>
