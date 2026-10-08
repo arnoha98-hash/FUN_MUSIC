@@ -1,0 +1,298 @@
+/* Netlify Approved Visual Identity System */
+:root {
+  --primary-color: #4A90E2;      /* الأزرق المبهج الرئيسي */
+  --secondary-color: #FF6B6B;    /* الوردي/الأحمر التفاعلي */
+  --accent-color: #FFD166;       /* الأصفر للنجوم والتنبيهات */
+  --green-color: #06D6A0;        /* الأخضر للإجابات الصحيحة */
+  --bg-color: #F0F7FF;           /* خلفية فاتحة ومريحة للعين */
+  --card-bg: #FFFFFF;            /* خلفية البطاقات */
+  --text-color: #2B2D42;         /* لون النصوص الداكن */
+  --font-family: 'Cairo', 'Tajawal', sans-serif;
+  --border-radius: 20px;         /* الحواف المنحنية المميزة للمنصة */
+  --box-shadow: 0 10px 25px rgba(74, 144, 226, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  direction: rtl;
+  text-align: right;
+  line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+  background: white;
+  padding: 15px 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 4px solid var(--primary-color);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-container img {
+  height: 50px;
+}
+
+.logo-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.nav-btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #E8F1FF;
+  color: var(--primary-color);
+  font-weight: bold;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover, .nav-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #E8F1FF 0%, #E6F9F5 100%);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Cards & Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 50px 20px;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 25px;
+  box-shadow: var(--box-shadow);
+  border: 2px solid #EBF3FE;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-color);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  background: #F0F7FF;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.btn-action {
+  margin-top: 15px;
+  padding: 12px 25px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.btn-action:hover {
+  background-color: #E05656;
+}
+
+/* Interactive Accordion for Units/Lessons */
+.unit-section {
+  background: white;
+  border-radius: var(--border-radius);
+  margin-bottom: 25px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.unit-header {
+  background: var(--primary-color);
+  color: white;
+  padding: 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lesson-list {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+/* Lesson Container Elements */
+.media-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.media-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Quiz Card Styling */
+.quiz-card {
+  background: #F9FBFF;
+  border: 2px dashed var(--primary-color);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.quiz-option {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  background: white;
+  border: 2px solid #DCE8FF;
+  border-radius: 10px;
+  text-align: right;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.quiz-option:hover {
+  background: #E8F1FF;
+}
+
+.quiz-option.correct {
+  background-color: #D4EDDA;
+  border-color: var(--green-color);
+  color: #155724;
+}
+
+.quiz-option.wrong {
+  background-color: #F8D7DA;
+  border-color: var(--secondary-color);
+  color: #721C24;
+}
+
+/* Virtual Piano Styling */
+.piano-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: #333;
+  border-radius: 15px;
+  user-select: none;
+}
+
+.key {
+  cursor: pointer;
+  position: relative;
+}
+
+.key.white {
+  width: 50px;
+  height: 180px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 0 0 8px 8px;
+  z-index: 1;
+}
+
+.key.white:active, .key.white.active {
+  background: #eee;
+}
+
+.key.black {
+  width: 30px;
+  height: 110px;
+  background: black;
+  margin-left: -15px;
+  margin-right: -15px;
+  z-index: 2;
+  border-radius: 0 0 5px 5px;
+}
+
+.key.black:active, .key.black.active {
+  background: #444;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الصف الرابع - المهارات الموسيقية</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <span style="font-size: 2rem;">🎼</span>
+      <div class="logo-title">المهارات الموسيقية | الصف الرابع</div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-btn">الرئيسية</a></li>
+      <li><a href="grade1.html" class="nav-btn">الصف الأول</a></li>
+      <li><a href="grade4.html" class="nav-btn active">الصف الرابع</a></li>
+    </ul>
+  </header>
+
+  <main class="container" style="margin-top: 30px;">
+    
+    <!-- Unit 1 -->
+    <div class="unit-section">
+      <div class="unit-header">
+        <span>الوحدة الأولى: التظليلات الموسيقية والأناشيد الوطنية</span>
+        <span>▼</span>
+      </div>
+      <div class="lesson-list">
+        
+        <!-- Lesson: Science Flag Anthem -->
+        <div class="card">
+          <div class="card-icon">🇴🇲</div>
+          <h3>الدرس الثاني: نشيد (عَلَمُ بلادي)</h3>
+          <p>كلمات: سعيد بن راشد الخصيبي - ألحان: محمد أحمد شعبان</p>[cite: 24, 25]
+          
+          <!-- Video / Listening Container -->
+          <div class="media-container" style="margin-top: 15px;">
+            <iframe src="https://www.youtube.com/embed/placeholder_anthem" title="فيديو نشيد علم بلادي"></iframe>
+          </div>
+
+          <!-- Interactive Question Card -->
+          <div class="quiz-card" data-correct="2">
+            <h4>سؤال تفاعلي: ماذا يرمز اللون الأبيض في علم سلطنة عمان؟</h4>[cite: 24, 26]
+            <button class="quiz-option" onclick="checkAnswer(this, 1)">الحرب والمعارك</button>[cite: 26]
+            <button class="quiz-option" onclick="checkAnswer(this, 2)">الأمن والسلام</button>[cite: 26]
+            <button class="quiz-option" onclick="checkAnswer(this, 3)">الخضرة والزراعة</button>[cite: 26]
+            <div class="quiz-feedback" style="margin-top: 10px; font-weight: bold;"></div>
+          </div>
+
+          <!-- Embedded Activity (Wordwall/Chrome Music Lab) -->
+          <a href="https://wordwall.net/embed/play/placeholder" target="_blank" class="btn-action" style="margin-top: 15px; background: var(--green-color);">فتح النشاط التفاعلي (Wordwall)</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Unit 2 -->
+    <div class="unit-section">
+      <div class="unit-header">
+        <span>الوحدة الثانية: آلة الأورج والعزف</span>[cite: 10, 36]
+        <span>▼</span>
+      </div>
+      <div class="lesson-list">
+        
+        <!-- Lesson: Org & Symphony 9 -->
+        <div class="card">
+          <div class="card-icon">🎹</div>
+          <h3>الدرس الثالث: عزف مقطوعة موسيقية (بيتهوفن)</h3>[cite: 10, 42, 47]
+          <p>عزف أول 5 نغمات من سلم دو الكبير (Symphony No 9)</p>[cite: 42, 47]
+
+          <div class="quiz-card" data-correct="1">
+            <h4>سؤال تفاعلي: ما هو إصبع اليد اليمنى المخصص لنغمة (دو الوسطى)؟</h4>[cite: 47, 83]
+            <button class="quiz-option" onclick="checkAnswer(this, 1)">الإبهام (1)</button>[cite: 83]
+            <button class="quiz-option" onclick="checkAnswer(this, 2)">السبابة (2)</button>
+            <button class="quiz-option" onclick="checkAnswer(this, 3)">الخنصر (5)</button>[cite: 83]
+            <div class="quiz-feedback" style="margin-top: 10px; font-weight: bold;"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
